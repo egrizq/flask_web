@@ -9,4 +9,7 @@ then you can proceed
 library needed:
 
 1. flask -> pip install flask
-2. mysql -> pip install SQLAlchemy
+2. mysql -> pip install Flask-MySQLdb
+3. Session -> pip install Flask-Session
+4. Plotly -> pip install plotly==5.18.0
+5. pandas -> pip install pandas
