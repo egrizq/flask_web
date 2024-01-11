@@ -1,0 +1,12 @@
+how to activate virtual env
+
+1. open terminal
+2. python -m venv myvenv -> to initialize virtual env
+3. .\myvenv\Scripts\activate -> to activate virtual env
+
+then you can proceed
+
+library needed:
+
+1. flask -> pip install flask
+2. mysql -> pip install SQLAlchemy
