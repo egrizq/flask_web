@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, session, redirect
 from flask_mysqldb import MySQL
-import os
 from flask_session import Session
+import plotly.express as px
+import os
 
 app = Flask(__name__)
 
@@ -114,6 +115,18 @@ def exportExcel():
             excel.save(file_path)
 
     return redirect("/")
+
+# todo showing plot
+
+
+@app.route("/dashboard")
+def dashboard():
+    fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2], labels={
+                 'x': 'X-axis', 'y': 'Y-axis'}, title='Sample Plot')
+    fig.update_layout(width=400, height=400)
+    plot_html = fig.to_html(full_html=False)
+
+    return render_template("dashboard.html", plot_html=plot_html)
 
 
 if __name__ == '__name__':
